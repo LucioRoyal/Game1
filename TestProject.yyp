@@ -30,7 +30,6 @@
     {"id":{"name":"objLever","path":"objects/objLever/objLever.yy",},"order":7,},
     {"id":{"name":"sprPlayerSword","path":"sprites/sprPlayerSword/sprPlayerSword.yy",},"order":4,},
     {"id":{"name":"sprEnemy2","path":"sprites/sprEnemy2/sprEnemy2.yy",},"order":2,},
-    {"id":{"name":"obj110weilbaum","path":"objects/obj110weilbaum/obj110weilbaum.yy",},"order":16,},
     {"id":{"name":"sprPlattform","path":"sprites/sprPlattform/sprPlattform.yy",},"order":13,},
     {"id":{"name":"sprPlayerMask","path":"sprites/sprPlayerMask/sprPlayerMask.yy",},"order":2,},
     {"id":{"name":"objSword","path":"objects/objSword/objSword.yy",},"order":3,},
