@@ -1,5 +1,7 @@
 global.vspd = vspeed;
 global.hspd = hspeed;
+global.playerX = x;
+global.playerY = y;
 
 //Collision
 //------------------------------------------------------------------------------------
@@ -7,15 +9,18 @@ if (keyboard_check_direct(ord("A")) && !place_meeting(x - 4.6, y, objSolid) && !
 {
 	hspeed =- 5;
 	rechts = false;
+	layer_hspeed("Background",1);
 }
 else if (keyboard_check_direct(ord("D")) && !place_meeting(x + 4.6, y, objSolid) && !place_meeting(x + 4.6, y, objDoorClosed))
 {
 	hspeed =+ 5;
 	rechts = true;
+	layer_hspeed("Background",-1);
 }
 else
 {
 	hspeed = 0;	
+	layer_hspeed("Background",0);
 }
 //------------------------------------------------------------------------------------
 
@@ -87,16 +92,19 @@ if(mouse_check_button_pressed(mb_right) && place_meeting(x,y+4,objSolid) && (glo
 {
 	instance_create_layer(x,y,"Instances",objTeleporter);
 	global.Tele = 1;
+	instance_create_layer(x,y,"Button",objButtonQ);
 }
 else if(mouse_check_button_pressed(mb_right) && place_meeting(x,y+4,objBelt) && (global.Tele == 0))
 {
 	instance_create_layer(x,y,"Instances",objTeleporter);
 	global.Tele = 1;
+	instance_create_layer(x,y,"Button",objButtonQ);
 }
 else if(mouse_check_button_pressed(mb_right) && place_meeting(x,y+4,objPlattform) && (global.Tele == 0))
 {
 	instance_create_layer(x,y,"Instances",objTeleporter);
 	global.Tele = 1;
+	instance_create_layer(x,y,"Button",objButtonQ);
 }
 
 
@@ -150,6 +158,15 @@ else if(place_meeting(x,y,objButton) && keyboard_check_pressed(ord("E")) && (glo
 	global.buttonPressed = false;	
 	global.pressedB = 0;
 }
+
+if(place_meeting(x,y,objButton))
+{
+	instance_create_layer(x + 32, y, "Button", objButtonE);
+}
+else
+{
+	instance_destroy(objButtonE);
+}
 //---------------------------------
 
 if place_meeting(x,y,objPlattform)
@@ -177,7 +194,7 @@ if( place_meeting(x,y,objLevelEnd))
 }
 
 //dash
-if keyboard_check_pressed(vk_shift) && mouse_x > x && !place_meeting(x+4.6,y,objSolid) && !place_meeting(x+4.6,y,objDoorClosed) && tpCd == 0
+if keyboard_check_pressed(vk_shift) && mouse_x > x && !place_meeting(x+4.6,y,objSolid) && !place_meeting(x+4.6,y,objDoorClosed) && tpCd < 1
 {
 	do
 	{
@@ -185,10 +202,12 @@ if keyboard_check_pressed(vk_shift) && mouse_x > x && !place_meeting(x+4.6,y,obj
 		dSpeed++;
 	}
 	until place_meeting(x+4.6,y,objSolid) || dSpeed == 100;
-
+	
+	tpCd = 100;
 	dSpeed = 0;
+	
 }
-else if keyboard_check_pressed(vk_shift) && mouse_x < x && !place_meeting(x-4.6,y,objSolid) && !place_meeting(x-4.6,y,objDoorClosed)
+else if keyboard_check_pressed(vk_shift) && mouse_x < x && !place_meeting(x-4.6,y,objSolid) && !place_meeting(x-4.6,y,objDoorClosed) && tpCd < 1
 {
 	do
 	{
@@ -198,5 +217,15 @@ else if keyboard_check_pressed(vk_shift) && mouse_x < x && !place_meeting(x-4.6,
 	}
 	until place_meeting(x-4.6,y,objSolid) || dSpeed == 100;
 	
+	tpCd = 100;
 	dSpeed = 0;
 }
+
+
+if tpCd > 0
+{
+	tpCd = tpCd - 1;	
+}
+
+draw_text(x+5, y+5, "LEVEL 1");
+
