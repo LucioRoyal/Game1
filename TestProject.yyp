@@ -35,6 +35,7 @@
     {"id":{"name":"objSword","path":"objects/objSword/objSword.yy",},"order":3,},
     {"id":{"name":"sprLever0","path":"sprites/sprLever0/sprLever0.yy",},"order":9,},
     {"id":{"name":"sprTeleporter","path":"sprites/sprTeleporter/sprTeleporter.yy",},"order":7,},
+    {"id":{"name":"objTESTDISCORD","path":"objects/objTESTDISCORD/objTESTDISCORD.yy",},"order":16,},
     {"id":{"name":"objButton","path":"objects/objButton/objButton.yy",},"order":11,},
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},"order":0,},
     {"id":{"name":"sprDoorClosing","path":"sprites/sprDoorClosing/sprDoorClosing.yy",},"order":18,},
