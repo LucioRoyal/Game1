@@ -39,6 +39,7 @@
     {"id":{"name":"sprEnemy2","path":"sprites/sprEnemy2/sprEnemy2.yy",},"order":2,},
     {"id":{"name":"objButtonE","path":"objects/objButtonE/objButtonE.yy",},"order":0,},
     {"id":{"name":"sprPlattform","path":"sprites/sprPlattform/sprPlattform.yy",},"order":13,},
+    {"id":{"name":"esesesdsad","path":"objects/esesesdsad/esesesdsad.yy",},"order":19,},
     {"id":{"name":"sprPlayerMask","path":"sprites/sprPlayerMask/sprPlayerMask.yy",},"order":2,},
     {"id":{"name":"objSword","path":"objects/objSword/objSword.yy",},"order":3,},
     {"id":{"name":"sprLever0","path":"sprites/sprLever0/sprLever0.yy",},"order":9,},
