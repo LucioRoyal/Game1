@@ -83,8 +83,7 @@ if mouse_check_button_pressed(mb_left)
 	else
 	{
 		instance_create_layer(x-32,y,"Instances",objSword)
-		sprite_index = sprPlayerSword;
-		image_angle = 180;
+		sprite_index = sprPlayerSwordLeft;
 	}
 }
 

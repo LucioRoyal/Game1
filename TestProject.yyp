@@ -17,6 +17,7 @@
     {"id":{"name":"sprLever1","path":"sprites/sprLever1/sprLever1.yy",},"order":10,},
     {"id":{"name":"objLevelStart","path":"objects/objLevelStart/objLevelStart.yy",},"order":14,},
     {"id":{"name":"sprBelt","path":"sprites/sprBelt/sprBelt.yy",},"order":8,},
+    {"id":{"name":"sprPlayerSwordLeft","path":"sprites/sprPlayerSwordLeft/sprPlayerSwordLeft.yy",},"order":31,},
     {"id":{"name":"sprLever1Highlight","path":"sprites/sprLever1Highlight/sprLever1Highlight.yy",},"order":12,},
     {"id":{"name":"objDoorClosed","path":"objects/objDoorClosed/objDoorClosed.yy",},"order":9,},
     {"id":{"name":"sprButtonClear","path":"sprites/sprButtonClear/sprButtonClear.yy",},"order":28,},
