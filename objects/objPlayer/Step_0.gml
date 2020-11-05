@@ -110,7 +110,7 @@ else if(mouse_check_button_pressed(mb_right) && place_meeting(x,y+4,objPlattform
 if(keyboard_check_pressed(ord("Q")) && (global.Tele == 1) && (global.portable == true))
 {
 		x = global.teleporterX;
-		y = global.teleporterY-16;
+		y = global.teleporterY-32;
 		instance_destroy(objTeleporter);
 		global.Tele = 0;
 }
