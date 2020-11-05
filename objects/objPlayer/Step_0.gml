@@ -82,7 +82,7 @@ if mouse_check_button_pressed(mb_left)
 	}
 	else
 	{
-		instance_create_layer(x-32,y,"Instances",objSword)
+		instance_create_layer(x-64,y,"Instances",objSword)
 		sprite_index = sprPlayerSwordLeft;
 	}
 }
@@ -228,3 +228,7 @@ if tpCd > 0
 
 draw_text(x+5, y+5, "LEVEL 1");
 
+if pc == 0
+{
+	room_restart();	
+}

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprPlattformFly",
-    "path": "sprites/sprPlattformFly/sprPlattformFly.yy",
+    "name": "sprElevator",
+    "path": "sprites/sprElevator/sprElevator.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,9 +20,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"objPlattformFly","path":"objects/objPlattformFly/objPlattformFly.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -30,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objPlattformFly",
+  "name": "objElevator",
   "tags": [],
   "resourceType": "GMObject",
 }
