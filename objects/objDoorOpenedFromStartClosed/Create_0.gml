@@ -1,0 +1,1 @@
+doorState = 0;

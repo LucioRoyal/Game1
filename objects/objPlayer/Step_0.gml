@@ -5,13 +5,13 @@ global.playerY = y;
 
 //Collision
 //------------------------------------------------------------------------------------
-if (keyboard_check_direct(ord("A")) && !place_meeting(x - 4.6, y, objSolid) && !place_meeting(x - 4.6, y, objDoorClosed))
+if (keyboard_check_direct(ord("A")) && !place_meeting(x - 4.6, y, objSolid) && !place_meeting(x - 4.6, y, objDoorClosed) && !place_meeting(x - 4.6, y, objDoorOpenedFromStartClosed))
 {
 	hspeed =- 5;
 	rechts = false;
 	layer_hspeed("Background",1);
 }
-else if (keyboard_check_direct(ord("D")) && !place_meeting(x + 4.6, y, objSolid) && !place_meeting(x + 4.6, y, objDoorClosed))
+else if (keyboard_check_direct(ord("D")) && !place_meeting(x + 4.6, y, objSolid) && !place_meeting(x + 4.6, y, objDoorClosed) && !place_meeting(x + 4.6, y, objDoorOpenedFromStartClosed))
 {
 	hspeed =+ 5;
 	rechts = true;
