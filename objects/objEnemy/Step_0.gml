@@ -15,6 +15,8 @@ else
 	vspeed = 3;	
 }
 
+
+
 shootCd++;
 
 if shootCd == 50
@@ -27,4 +29,29 @@ if shootCd == 50
 }
 
 targetX = global.playerX;
-move_towards_point(targetX,y,1);
+
+if targetX > x
+{
+	right = true;	
+}
+else
+{
+	right = false;	
+}
+
+if place_free(x + hspdColl, y) && place_free(x - hspdColl, y)
+{
+	move_towards_point(targetX,y,1);
+}
+
+
+if hspeed >= 1 && place_meeting(x + 5, y, objSolid)
+{
+	hspeed = hspeed - 1;
+}
+else if hspeed >= -1 && place_meeting(x - 5, y, objSolid)
+{
+	hspeed = hspeed + 1;	
+}
+
+

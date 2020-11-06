@@ -9,3 +9,4 @@ tpCd = 0;
 global.playerX = x;
 global.playerY = y;
 pc = 100;
+
