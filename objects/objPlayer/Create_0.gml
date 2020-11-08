@@ -9,4 +9,4 @@ tpCd = 0;
 global.playerX = x;
 global.playerY = y;
 pc = 100;
-
+instance_create_layer(0,0,"instances",objShield);
