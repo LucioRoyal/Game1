@@ -9,9 +9,9 @@ else
 
 if(global.beltRight == true)
 {
-	image_angle	= 0;
+	sprite_index = sprBelt;
 }
 else
 {
-	image_angle = 180;
+	sprite_index = sprBeltLeft;
 }

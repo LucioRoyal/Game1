@@ -236,7 +236,6 @@ if tpCd > 0
 	tpCd = tpCd - 1;	
 }
 
-draw_text(x+5, y+5, "LEVEL 1");
 
 if pc == 0
 {
