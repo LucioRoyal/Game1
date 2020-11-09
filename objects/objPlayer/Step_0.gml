@@ -203,20 +203,20 @@ if( place_meeting(x,y,objLevelEnd))
 }
 
 //dash
-if mouse_check_button_pressed(mb_right) && mouse_x > x && !place_meeting(x+4.6,y,objSolid) && !place_meeting(x+4.6,y,objDoorClosed) && tpCd < 1
+if mouse_check_button_pressed(mb_right) && rechts == true && !place_meeting(x+4.6,y,objSolid) && !place_meeting(x+4.6,y,objDoorClosed) && tpCd < 1
 {
 	do
 	{
 		x++;
 		dSpeed++;
 	}
-	until place_meeting(x+4.6,y,objSolid) || dSpeed == 100;
+	until place_meeting(x+4.6,y,objSolid) || place_meeting(x+4.6,y,objDoorClosed) || place_meeting(x+4.6,y,objDoorOpenedFromStartClosed) || dSpeed == 100;
 	
 	tpCd = 100;
 	dSpeed = 0;
 	
 }
-else if mouse_check_button_pressed(mb_right) && mouse_x < x && !place_meeting(x-4.6,y,objSolid) && !place_meeting(x-4.6,y,objDoorClosed) && tpCd < 1
+else if mouse_check_button_pressed(mb_right) && rechts == false && !place_meeting(x-4.6,y,objSolid) && !place_meeting(x-4.6,y,objDoorClosed) && !place_meeting(x-4.6,y,objDoorOpenedFromStartClosed) && tpCd < 1 
 {
 	do
 	{
@@ -224,7 +224,7 @@ else if mouse_check_button_pressed(mb_right) && mouse_x < x && !place_meeting(x-
 		dSpeed++;
 		vspeed = 0;
 	}
-	until place_meeting(x-4.6,y,objSolid) || dSpeed == 100;
+	until place_meeting(x-4.6,y,objSolid) || place_meeting(x-4.6,y,objDoorClosed) || place_meeting(x-4.6,y,objDoorOpenedFromStartClosed) || dSpeed == 100;
 	
 	tpCd = 100;
 	dSpeed = 0;
