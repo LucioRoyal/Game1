@@ -203,6 +203,8 @@ if( place_meeting(x,y,objLevelEnd))
 }
 
 //dash
+if global.secWeb == 0
+{
 if mouse_check_button_pressed(mb_right) && rechts == true && !place_meeting(x+4.6,y,objSolid) && !place_meeting(x+4.6,y,objDoorClosed) && tpCd < 1
 {
 	do
@@ -229,6 +231,7 @@ else if mouse_check_button_pressed(mb_right) && rechts == false && !place_meetin
 	tpCd = 100;
 	dSpeed = 0;
 }
+}
 
 
 if tpCd > 0
@@ -242,4 +245,29 @@ if pc == 0
 	room_restart();	
 }
 
+// 2. Weapon
+if mouse_wheel_down()
+{
+	global.secWeb--;
+}
+else if mouse_wheel_up() 
+{
+	global.secWeb++;	
+}
 
+if global.secWeb > 2
+{
+	global.secWeb = 0;	
+}
+else if global.secWeb < 0
+{
+	global.secWeb = 2;
+}
+
+if global.secWeb == 2
+{	if mouse_check_button(mb_right) && energy == false
+	{
+		instance_create_layer(x-48,y-32,"Instances",objEnergySphere);
+		energy = true;
+	}
+}

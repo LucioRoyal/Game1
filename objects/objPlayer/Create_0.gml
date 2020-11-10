@@ -10,3 +10,6 @@ global.playerX = x;
 global.playerY = y;
 pc = 100;
 instance_create_layer(0,0,"instances",objShield);
+global.secWeb = 0;
+
+energy = false;
